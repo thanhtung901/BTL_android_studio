@@ -1,5 +1,5 @@
 package com.example.pttkht;
-
+// commenttttttttttt
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         if(user.equals("") && (password.equals("")))
         {
             Context context = getApplicationContext();
-            CharSequence text = "Nhập thông tin tài khoản mật khẩu";
+            CharSequence text = "Nhập thông tin tài khoản mật khẩu"; //commmen
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
