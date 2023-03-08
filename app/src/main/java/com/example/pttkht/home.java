@@ -34,17 +34,17 @@ public class home extends AppCompatActivity {
         imgbtnhansu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent qlns = new Intent(home.this, home_QLNS.class );
+                Intent qlns = new Intent(home.this, bankhach.class );
                 startActivity(qlns);
             }
         });
-        imgbttaichinh.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent qlns = new Intent(home.this, Ql_taichinh.class );
-                startActivity(qlns);
-            }
-        });
+//        imgbttaichinh.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent qlns = new Intent(home.this, bankhach.class );
+//                startActivity(qlns);
+//            }
+//        });
 
     }
 }

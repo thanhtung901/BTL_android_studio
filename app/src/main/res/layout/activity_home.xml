@@ -114,7 +114,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="256dp"
         android:layout_marginBottom="173dp"
-        android:text="Nhân Sự"
+        android:text="Bàn khách"
         android:textColor="#401B1B"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -152,7 +152,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_taichinh" />
+        app:srcCompat="@drawable/icon_taichinh"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/textView43"

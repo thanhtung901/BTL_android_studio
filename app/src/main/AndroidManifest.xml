@@ -14,6 +14,13 @@
         android:theme="@style/Theme.PTTKHT"
         tools:targetApi="31">
         <activity
+            android:name=".bankhach"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Ql_taichinh"
             android:exported="false" />
         <activity
