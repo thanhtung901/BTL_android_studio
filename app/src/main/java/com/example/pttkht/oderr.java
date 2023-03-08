@@ -3,7 +3,9 @@ package com.example.pttkht;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -43,12 +45,15 @@ public class oderr extends AppCompatActivity {
 
 
         btoder.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
 
                 sobans = xulySoban();
                 oderss =xulycheckbox();
+                Intent intent = new Intent(oderr.this, bankhach.class);
+                intent.putExtra("soban", sobans);
+                intent.putExtra("oder", oderss);
+                startActivity(intent);
             }
         });
         bthome.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +67,6 @@ public class oderr extends AppCompatActivity {
     }
     public int xulySoban(){
         int soban = Integer.parseInt(txtsoban.getText().toString());
-        int s=0;
         if(soban > 6 || soban < 1) {
             Context context = getApplicationContext();
             CharSequence text = "Mời nhập số bàn từ 1 đến 6";
@@ -70,7 +74,6 @@ public class oderr extends AppCompatActivity {
             Toast toast = Toast.makeText(context, text, duration);
             toast.show();
         } else {
-            s = soban;
             Context context = getApplicationContext();
             CharSequence text = "Đã chọn đồ cho bàn số " + soban;
             int duration = Toast.LENGTH_SHORT;
@@ -78,41 +81,58 @@ public class oderr extends AppCompatActivity {
             toast.show();
 
         }
-        return s;
+        return soban;
     }
     public String xulycheckbox(){
          String[] do_uong = {};
         List<String> testList = new ArrayList<>(Arrays.asList(do_uong));
         if (cbchanhtuyet.isChecked())
-        {
-            testList.add("chanhtuyet");
-        }
+            testList.add("chanh tuyết");
         if (cbmachiato.isChecked())
-        {
             testList.add("machiato");
-        }
         if (cbtraxanh.isChecked())
-        {
-            testList.add("traxanhsua");
-        }
+            testList.add("trà xanh sữa ");
         if (cbkhoga.isChecked())
-        {
-            testList.add("khoga");
-        }
+            testList.add("khô gà");
         if (cbhuongduong.isChecked())
-        {
-            testList.add("huongduong");
-        }
+            testList.add("hướng dương");
         if (cbvanicano.isChecked())
-        {
-            testList.add("vanicano");
-        }
+            testList.add("vani cano ");
         if (cbthachden.isChecked())
-        {
-            testList.add("thachden");
-        }
+            testList.add("thạch đen ");
+        if(cbsuachua.isChecked())
+            testList.add("sữa chua dầm đá ");
         do_uong = testList.toArray(new String[0]);
         String do_oder = Arrays.toString(do_uong);
         return do_oder;
+    }
+    public void diaglog(String a){
+        AlertDialog.Builder builder;
+        builder = new AlertDialog.Builder(this);
+//        builder.setMessage(R.string.dialog_message) .setTitle(R.string.dialog_title);
+
+        //Setting message manually and performing action on button click
+        builder.setMessage(a)
+                .setCancelable(false)
+                .setPositiveButton("Thanhtoán", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        Intent intent = new Intent(oderr.this, Ql_taichinh.class);
+                        startActivity(intent);
+
+                    }
+                })
+                .setNegativeButton("close", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        //  Action for 'NO' Button
+                        dialog.cancel();
+                        Toast.makeText(getApplicationContext(),"closed",
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+        //Creating dialog box
+        AlertDialog alert = builder.create();
+        //Setting the title manually
+        alert.setTitle("ODER");
+        alert.show();
     }
 }
