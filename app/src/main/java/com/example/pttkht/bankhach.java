@@ -145,18 +145,17 @@ public class bankhach extends AppCompatActivity {
         //Setting message manually and performing action on button click
         builder.setMessage(a)
                 .setCancelable(false)
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                .setPositiveButton("Thanh toán", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        finish();
-                        Toast.makeText(getApplicationContext(),"oke",
-                                Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(bankhach.this, Ql_taichinh.class);
+                        startActivity(intent);
                     }
                 })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Close", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         //  Action for 'NO' Button
                         dialog.cancel();
-                        Toast.makeText(getApplicationContext(),"oke",
+                        Toast.makeText(getApplicationContext(),"Closed",
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
