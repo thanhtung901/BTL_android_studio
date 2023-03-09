@@ -70,10 +70,16 @@ public class oderr extends AppCompatActivity {
 
                 sobans = xulySoban();
                 oderss =xulycheckbox();
-                Intent intent = new Intent(oderr.this, bankhach.class);
-                intent.putExtra("soban", sobans);
-                intent.putExtra("oder", oderss);
-                startActivity(intent);
+//                Intent intent = new Intent(oderr.this, bankhach.class);
+//                intent.putExtra("soban", sobans);
+//                intent.putExtra("oder", oderss);
+                if (sobans<=6 && sobans>=1){
+                    push_stt(1,"/ban"+sobans+"/stt");
+                    push_oder(oderss,"/ban"+sobans+"/oder" );
+                }
+
+
+//                startActivity(intent);
             }
         });
         bthome.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +89,24 @@ public class oderr extends AppCompatActivity {
                 startActivity(kho);
             }
         });
+
+    }
+    public void push_stt(int value, String path)
+    {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference(path);
+        myRef.setValue(value);
+    }
+    public void push_oder(String value, String path)
+    {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference(path);
+        myRef.setValue(value);
+        Context context = getApplicationContext();
+        CharSequence text = "Đã oder";
+        int duration = Toast.LENGTH_SHORT;
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
 
     }
     public int xulySoban(){

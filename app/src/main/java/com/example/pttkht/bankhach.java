@@ -1,5 +1,6 @@
 package com.example.pttkht;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -8,16 +9,20 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class bankhach extends AppCompatActivity {
     AlertDialog.Builder builder;
     public Button btban1,btban2, btban3,btban4,btban5,btban6,home;
-    int ban1,ban2,ban3,ban4,ban5,ban6;
-    String oder1, oder2, oder3, oder4, oder5, oder6;
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,113 +41,37 @@ public class bankhach extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        delay();
+    }
+    public void delay()
+    {
+        Thread thread = new Thread() {
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(500);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                get_ban(btban1, "/ban1/stt", "/ban1/oder");
+                                get_ban(btban2, "/ban2/stt", "/ban2/oder");
+                                get_ban(btban3, "/ban3/stt", "/ban3/oder");
+                                get_ban(btban4, "/ban4/stt", "/ban4/oder");
+                                get_ban(btban5, "/ban5/stt", "/ban5/oder");
+                                get_ban(btban6, "/ban6/stt", "/ban6/oder");
 
-        Intent intent = getIntent();
-        String oders = intent.getStringExtra("oder");
-        int soban = intent.getIntExtra("soban",0);
-
-        if(soban==1) {
-            ban1 = soban;
-            oder1 = oders;
-            if (ban1 == 1)
-                btban1.setBackgroundColor(Color.RED);
-
-        }
-        if(soban==2){
-            ban2 = soban;
-            oder2 = oders;
-            if(ban2 ==2)
-                btban2.setBackgroundColor(Color.RED);}
-        if(soban==3) {
-            ban3 = soban;
-            oder3 = oders;
-            if (ban3 == 3)
-                btban3.setBackgroundColor(Color.RED);
-        }
-        if(soban==4)
-        {
-            ban4 = soban;
-            oder4 = oders;
-            if(ban4 ==4)
-                btban4.setBackgroundColor(Color.RED);
-        }
-        if(soban==5){
-            ban5 = soban;
-            oder5 = oders;
-            if(ban5 ==5)
-                btban5.setBackgroundColor(Color.RED);
-        }
-        if(soban==6){
-            ban6 = soban;
-            oder6 = oders;
-            if(ban6 ==6)
-                btban6.setBackgroundColor(Color.RED);
-        }
-        if(ban1==1) {
-            btban1.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    diaglog(oder1);
+                            }
+                        });
+                    }
+                } catch (InterruptedException e) {
                 }
-            });
-        }
-        if(ban2==2){
-            btban2.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    diaglog(oder2);
-                }
-            });
-
-
-        }
-        if(ban3==3){
-            btban3.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    diaglog(oder3);
-                }
-            });
-
-
-        }
-        if(ban4==4){
-            btban4.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    diaglog(oder4);
-                }
-            });
-
-
-        }
-        if(ban5==5){
-            btban5.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    diaglog(oder5);
-                }
-            });
-
-
-        }
-        if(ban6==6){
-            btban6.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    diaglog(oder6);
-                }
-            });
-
-
-        }
-
+            }
+        };
+        thread.start();
     }
     public void diaglog(String a){
         builder = new AlertDialog.Builder(this);
-//        builder.setMessage(R.string.dialog_message) .setTitle(R.string.dialog_title);
-
-        //Setting message manually and performing action on button click
         builder.setMessage(a)
                 .setCancelable(false)
                 .setPositiveButton("Thanh toán", new DialogInterface.OnClickListener() {
@@ -164,5 +93,69 @@ public class bankhach extends AppCompatActivity {
         //Setting the title manually
         alert.setTitle("ODER");
         alert.show();
-        }
+    }
+    public void get_ban(Button bt, String pathstt, String pathoder){
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference stt = database.getReference(pathstt);
+        stt.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Log.e("firebase", "Error getting data", task.getException());
+                }
+                else {
+                    int stt = Integer.parseInt(String.valueOf(task.getResult().getValue()));
+                    if(stt == 1)
+                    {
+                        DatabaseReference oder = database.getReference(pathoder);
+                        oder.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                if (!task.isSuccessful()) {
+                                    Log.e("firebase", "Error getting data", task.getException());
+                                }
+                                else {
+                                    String oder = String.valueOf(task.getResult().getValue());
+                                    bt.setBackgroundColor(Color.RED);
+                                    bt.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            builder = new AlertDialog.Builder(bankhach.this);
+                                            builder.setMessage(oder)
+                                                    .setCancelable(false)
+                                                    .setPositiveButton("Thanh toán", new DialogInterface.OnClickListener() {
+                                                        public void onClick(DialogInterface dialog, int id) {
+                                                            FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                                            DatabaseReference set_stt = database.getReference(pathstt);
+                                                            set_stt.setValue(0);
+                                                            DatabaseReference set_oder = database.getReference(pathoder);
+                                                            set_oder.setValue("");
+                                                            Intent intent = new Intent(bankhach.this, Ql_taichinh.class);
+                                                            startActivity(intent);
+                                                        }
+                                                    })
+                                                    .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                                                        public void onClick(DialogInterface dialog, int id) {
+                                                            //  Action for 'NO' Button
+                                                            dialog.cancel();
+                                                            Toast.makeText(getApplicationContext(),"Closed",
+                                                                    Toast.LENGTH_SHORT).show();
+                                                        }
+                                                    });
+                                            //Creating dialog box
+                                            AlertDialog alert = builder.create();
+                                            //Setting the title manually
+                                            alert.setTitle("ODER");
+                                            alert.show();
+                                        }
+                                    });
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+        });
+    }
+
 }
