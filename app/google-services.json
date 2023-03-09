@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "577814316534",
+    "firebase_url": "https://android-kmt-default-rtdb.firebaseio.com",
+    "project_id": "android-kmt",
+    "storage_bucket": "android-kmt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:577814316534:android:d1b923307adcb03d71b3d7",
+        "android_client_info": {
+          "package_name": "com.example.pttkht"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "577814316534-dhdt975aghivnqeungngkmflbpda1sf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjOQeOXC_XG11LhMfZgLqaPxBsgbHdUGw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "577814316534-dhdt975aghivnqeungngkmflbpda1sf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

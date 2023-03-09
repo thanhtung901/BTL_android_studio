@@ -14,14 +14,13 @@
 
 
         <TextView
-            android:id="@+id/textView32"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/giahuongduong"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="860dp"
             android:layout_marginEnd="148dp"
             android:layout_marginBottom="297dp"
-            android:text="Giá: 25.000đ"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -62,14 +61,13 @@
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
-            android:id="@+id/textView29"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/giakhoga"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="740dp"
             android:layout_marginEnd="148dp"
             android:layout_marginBottom="408dp"
-            android:text="Giá: 40.000đ"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -123,14 +121,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView17"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/giavinacano"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="234dp"
             android:layout_marginEnd="158dp"
             android:layout_marginBottom="82dp"
-            android:text="Giá: 35.000đ"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -140,14 +137,13 @@
             app:layout_constraintVertical_bias="0.162" />
 
         <TextView
-            android:id="@+id/textView20"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/giasuachua"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="234dp"
             android:layout_marginEnd="158dp"
             android:layout_marginBottom="82dp"
-            android:text="Giá: 35.000đ"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -157,14 +153,13 @@
             app:layout_constraintVertical_bias="0.306" />
 
         <TextView
-            android:id="@+id/textView23"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/giatraxanh"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="234dp"
             android:layout_marginEnd="158dp"
             android:layout_marginBottom="82dp"
-            android:text="Giá: 50.000đ"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -313,7 +308,7 @@
             android:layout_marginBottom="91dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView17"
+            app:layout_constraintStart_toEndOf="@+id/giavinacano"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.162"
             tools:ignore="TouchTargetSizeCheck" />
@@ -388,14 +383,13 @@
             app:layout_constraintVertical_bias="0.02" />
 
         <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/giachanhtuyet"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="234dp"
             android:layout_marginEnd="158dp"
             android:layout_marginBottom="82dp"
-            android:text="Giá: 50.000đ"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -529,14 +523,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView34"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/giamachiato"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="969dp"
             android:layout_marginEnd="148dp"
             android:layout_marginBottom="180dp"
-            android:text="Giá: 15.000đ"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -561,14 +554,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView36"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/giathachden"
+            android:layout_width="120dp"
+            android:layout_height="30dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="1098dp"
             android:layout_marginEnd="159dp"
             android:layout_marginBottom="59dp"
-            android:text="Giá: 8.000đ"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -586,7 +578,7 @@
             android:layout_marginBottom="179dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView34"
+            app:layout_constraintStart_toEndOf="@+id/giamachiato"
             app:layout_constraintTop_toTopOf="parent" />
 
         <CheckBox
