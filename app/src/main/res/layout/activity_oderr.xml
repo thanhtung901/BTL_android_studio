@@ -13,6 +13,89 @@
         tools:context=".oderr">
 
 
+        <EditText
+            android:id="@+id/slhuongduong"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="338dp"
+            android:hint="sl"
+            android:inputType="number"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/checkboxhuongduong"
+            app:layout_constraintTop_toBottomOf="@+id/slkhoga" />
+
+        <EditText
+            android:id="@+id/slkhoga"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginBottom="438dp"
+            android:hint="sl"
+            android:inputType="number"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkboxkhoga"
+            app:layout_constraintTop_toBottomOf="@+id/checkboxtraxanhsua" />
+
+        <EditText
+            android:id="@+id/sltraxanh"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="94dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginBottom="563dp"
+            android:hint="sl"
+            android:inputType="number"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/checkboxtraxanhsua"
+            app:layout_constraintTop_toBottomOf="@+id/checkboxsuachuadamda" />
+
+        <EditText
+            android:id="@+id/slsuachua"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="73dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginBottom="697dp"
+            android:hint="sl"
+            android:inputType="number"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkboxsuachuadamda"
+            app:layout_constraintTop_toBottomOf="@+id/slvinacano" />
+
+        <EditText
+            android:id="@+id/slvinacano"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="82dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginBottom="810dp"
+            android:hint="sl"
+            android:inputType="number"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/checkboxvinacano"
+            app:layout_constraintTop_toBottomOf="@+id/checkboxchanhtuyet" />
+
         <TextView
             android:id="@+id/giahuongduong"
             android:layout_width="120dp"
@@ -49,15 +132,10 @@
             android:id="@+id/checkboxkhoga"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginTop="207dp"
-            android:layout_marginEnd="27dp"
-            android:layout_marginBottom="91dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="707dp"
             app:layout_constraintStart_toEndOf="@+id/textView31"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.598"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -65,45 +143,35 @@
             android:layout_width="120dp"
             android:layout_height="30dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="740dp"
+            android:layout_marginTop="750dp"
             android:layout_marginEnd="148dp"
-            android:layout_marginBottom="408dp"
+            android:layout_marginBottom="407dp"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.4"
             app:layout_constraintStart_toEndOf="@+id/imageView7"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <CheckBox
             android:id="@+id/checkboxtraxanhsua"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginStart="92dp"
-            android:layout_marginTop="207dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginBottom="91dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="580dp"
             app:layout_constraintStart_toEndOf="@+id/textView24"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.451"
             tools:ignore="TouchTargetSizeCheck" />
 
         <CheckBox
             android:id="@+id/checkboxsuachuadamda"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginStart="53dp"
-            android:layout_marginTop="207dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="91dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="450dp"
             app:layout_constraintStart_toEndOf="@+id/textView21"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
@@ -191,9 +259,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="207dp"
-            android:layout_marginEnd="109dp"
+            android:layout_marginEnd="138dp"
             android:layout_marginBottom="109dp"
-            android:text="Sữa Chua Dầm Đá"
+            android:text="Sữa Chua Dầm"
             android:textColor="#471717"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -287,30 +355,20 @@
             android:id="@+id/checkboxchanhtuyet"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginStart="107dp"
-            android:layout_marginTop="207dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="91dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="215dp"
             app:layout_constraintStart_toEndOf="@+id/textView14"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.02"
             tools:ignore="TouchTargetSizeCheck" />
 
         <CheckBox
             android:id="@+id/checkboxvinacano"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginStart="115dp"
-            android:layout_marginTop="207dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="91dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/giavinacano"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="333dp"
+            app:layout_constraintStart_toEndOf="@+id/textView18"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.162"
             tools:ignore="TouchTargetSizeCheck" />
 
         <ImageView
@@ -476,134 +534,12 @@
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/huongduong25k" />
 
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="1070dp"
-            android:layout_marginEnd="287dp"
-            android:layout_marginBottom="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/thachden8k" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="943dp"
-            android:layout_marginEnd="287dp"
-            android:layout_marginBottom="128dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/macchiato15k" />
-
-        <TextView
-            android:id="@+id/textView33"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="947dp"
-            android:layout_marginEnd="167dp"
-            android:layout_marginBottom="202dp"
-            android:text="Macchiato"
-            android:textColor="#471417"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView9"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/giamachiato"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="969dp"
-            android:layout_marginEnd="148dp"
-            android:layout_marginBottom="180dp"
-            android:textColor="#471717"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView9"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/textView35"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="1070dp"
-            android:layout_marginEnd="166dp"
-            android:layout_marginBottom="79dp"
-            android:text="Thạch Đen"
-            android:textColor="#471717"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/giathachden"
-            android:layout_width="120dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="1098dp"
-            android:layout_marginEnd="159dp"
-            android:layout_marginBottom="59dp"
-            android:textColor="#471717"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView10"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <CheckBox
-            android:id="@+id/checkboxmachiato"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="949dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="179dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/giamachiato"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <CheckBox
-            android:id="@+id/checkboxthachden"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="96dp"
-            android:layout_marginTop="1076dp"
-            android:layout_marginEnd="22dp"
-            android:layout_marginBottom="52dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView35"
-            app:layout_constraintTop_toTopOf="parent" />
-
         <CheckBox
             android:id="@+id/checkboxhuongduong"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:layout_marginStart="65dp"
-            android:layout_marginTop="819dp"
-            android:layout_marginEnd="26dp"
-            android:layout_marginBottom="312dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="815dp"
             app:layout_constraintStart_toEndOf="@+id/textView27"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="TouchTargetSizeCheck" />
@@ -620,5 +556,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <EditText
+            android:id="@+id/slchanhtuyet"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginBottom="926dp"
+            android:hint="sl"
+            android:inputType="number"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkboxchanhtuyet"
+            app:layout_constraintTop_toBottomOf="@+id/btoder" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

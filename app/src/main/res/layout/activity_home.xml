@@ -139,37 +139,4 @@
         app:srcCompat="@drawable/icon_qlns"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/imgbttaichinh"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="226dp"
-        android:layout_marginTop="382dp"
-        android:layout_marginEnd="65dp"
-        android:layout_marginBottom="229dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icon_taichinh"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <TextView
-        android:id="@+id/textView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="224dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="173dp"
-        android:text="Tài Chính"
-        android:textColor="#401B1B"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgbttaichinh" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,7 +16,7 @@ public class home extends AppCompatActivity {
         imgbtnhansu = findViewById(R.id.imgbtnhansu);
         imgbtnhapkho = findViewById(R.id.imgbtnhapkho);
         imgbtoder = findViewById(R.id.imgbtoder);
-        imgbttaichinh = findViewById(R.id.imgbttaichinh);
+//        imgbttaichinh = findViewById(R.id.imgbttaichinh);
 
         imgbtoder.setOnClickListener(new View.OnClickListener() {
             @Override

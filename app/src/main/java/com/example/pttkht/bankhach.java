@@ -116,6 +116,7 @@ public class bankhach extends AppCompatActivity {
                                 }
                                 else {
                                     String oder = String.valueOf(task.getResult().getValue());
+//                                    String stroder = oder.substring(1, oder.length()-1);
                                     bt.setBackgroundColor(Color.RED);
                                     bt.setOnClickListener(new View.OnClickListener() {
                                         @Override
@@ -130,8 +131,13 @@ public class bankhach extends AppCompatActivity {
                                                             set_stt.setValue(0);
                                                             DatabaseReference set_oder = database.getReference(pathoder);
                                                             set_oder.setValue("");
+                                                            String soban = pathstt.substring(1,5);
+
                                                             Intent intent = new Intent(bankhach.this, Ql_taichinh.class);
+                                                            intent.putExtra("guiban", soban);
+                                                            intent.putExtra("guioder", oder);
                                                             startActivity(intent);
+
                                                         }
                                                     })
                                                     .setNegativeButton("Close", new DialogInterface.OnClickListener() {
